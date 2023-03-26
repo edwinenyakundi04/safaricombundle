@@ -1,0 +1,131 @@
+#include<stdio.h>
+#include<windows.h>
+//buy bundles function proto type
+void  BuyBundles();
+ void okoa(){
+ 	int choice;
+ 	printf("1.okoa 20\n2.okoa 50\n3.0koa 100\n4.repay okoa\n");
+ 	scanf("%d",&choice);
+ 	switch(choice){
+ 		case 1:
+ 			printf("safaricom\n you have received sh 18 .\n your outstanding okoa jahazi is sh .20\n");
+ 			break;
+ 			case 2:
+ 				 			printf("safaricom\n you have received sh 45 .\n your outstanding okoa jahazi is sh .50\n");
+ 				 			break;
+ 				 			case 3:
+ 				 				 			printf("safaricom\n you have received sh 90 .\n your outstanding okoa jahazi is sh .100\n");
+ 				 				 			break;
+ 				 				 			case 4:
+ 				 				 				int amount;
+ 				 				 				printf("ENETR AMOUNT TO REPAY\n1.FULL AMOUNT\nPARTIAL AMOUNT\n");
+ 				 				 				scanf("%d",&amount);
+ 				 				 				switch(amount){
+ 				 				 					case 1:
+ 				 				 						printf("you have fully settled your okoa jahazi\n you can borrow again by dialing *131#\nsafaricom the better option\n");
+ 				 				 					break;
+													   	case 2:
+ 				 				 							printf("your okoa has been partially settled please make effort to settle the remaining amount\nsafaricom the better option");
+ 				 				 							break;
+															   default:
+ 				 				 								printf("invalid choice try agin later\nsafricom the better option\n");
+												   }
+												   break;
+												   default:
+												   	printf("invalid choice try agin later\nsafaricom the better option\n");
+
+
+	 }
+ }
+void	monthly(){
+		int choice;
+			printf("1.sh 50 for 500mb\n2.sh 100 for 1gb\n3.sh 1000 for 5 gb\n");
+			switch (choice){
+				case 1:
+				printf("message\nconfirmed you have received  500 mbs valid for 1 month\nsender does not support replies");	
+				case 2:
+					printf("message\nconfirmed you have received  1gb valid for 1 month\nsender does not support replies");	
+					case 3:
+						printf("message\nconfirmed you have received  5gb mbs valid for 1 month\nsender does not support replies");	
+						default:
+							printf("invalid choice try again later");
+			}
+	}
+void special(){
+	printf("1.sh 5 for 500mbs valid for 1 hr\n2.sh 100 5gb valid for 1 hr\n");
+	int choice;
+	scanf("%d",&choice);
+	switch(choice){
+		case 1:
+					printf("message\nconfirmed you have received  500 mbs valid for 1 hr\nsender does not support replies");
+					break;
+					case 2:
+								printf("message\nconfirmed you have received  5gb mbs valid for 1hr\nsender does not support replies");
+								default:
+									printf("invalid  choice try again later");
+	}
+	
+}
+void daily(){
+	printf("1.sh 5 for 7mbs\n2.sh 10 for 35mbs\3.sh 20 for 70 mbs\n");
+	int choice;
+	scanf("%d",&choice);
+	switch(choice){
+		case 1:
+			printf("message\nconfirmed you have received  7 mbs valid for 24 hours\nsender does not support replies");
+			break;
+			case 2:
+						printf("message\nconfirmed you have received  35 mbs valid for 24 hours\nsender does not support replies");
+						break;
+						case 3:
+									printf("message\nconfirmed you have received  70 mbs valid for 24 hours\nsender does not support replies");
+									break;
+									default:
+										printf("invalid choice try again later\nsafaricom the better option.....");
+				
+	}
+	
+}
+int main(){
+	system("color 9F");
+	SetConsoleTitle("SAFARICOM BUNDLE SYSTEM||MY ENGINEER EDWINE");
+	printf("**\t TO SAFARICOM   \t**\nPICK A CHOICE:\n1.Buy bundles\n2.Okoa\n3.Bonga points\n4.Contact us\n5.eXIT\n");
+	int option;
+	scanf("%d",&option);
+	switch(option){
+		case 1:
+			BuyBundles();
+			break;
+			case 2:
+				okoa();
+				break;
+				case 5:
+					exit(1);
+					break; 
+	}
+	return 0;
+}
+void  BuyBundles(){
+	int choice;
+	printf("1.Daily bundles\n2.Special offer\n3.Monthly bundles\n4.Okoa");
+	
+	scanf("%d",&choice);
+	switch(choice){
+		case 1:
+			daily();
+			break;
+			case 2:
+				special();
+				break;
+				case 3:
+					monthly();
+					break;
+					case 4:
+						okoa();
+						break;
+						default:
+							printf("invalid choice try again later");
+				}
+	}
+	
+	
